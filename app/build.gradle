@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        runner {
+            keyAlias 'runner'
+            keyPassword 'zekokoptev'
+            storeFile file('E:/runner_sign.jks')
+            storePassword 'zekokoptev'
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId 'com.game.koptev.therunner'
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionName '1.1.5'
+        signingConfig signingConfigs.runner
+        versionCode 115
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+}

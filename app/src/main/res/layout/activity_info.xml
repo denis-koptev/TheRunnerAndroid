@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.game.koptev.therunner.InfoActivity"
+    android:theme="@android:style/Theme.Black.NoTitleBar"
+    android:screenOrientation="landscape">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_height="fill_parent"
+        android:padding="0dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="INFORMATION"
+        android:id="@+id/info_title"
+        android:layout_marginTop="26dp"
+        android:textAlignment="center"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Developed by Koptev Denis Andreevich, 2016, Saint-Petersburg, Russia"
+        android:id="@+id/textView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="HIGHSCORE: 0"
+        android:id="@+id/score_text"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/info_title"
+        android:layout_alignStart="@+id/info_title"
+        android:layout_alignRight="@+id/info_title"
+        android:layout_alignEnd="@+id/info_title"
+        android:textAlignment="center" />
+
+</RelativeLayout>
